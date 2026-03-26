@@ -1,0 +1,25 @@
+Redes de computadores CCNA - 2
+
+1.2 - Configurar um switch com definições iniciais
+
+1.2.1 - Comunicação duplex
+
+ -  A comunicação full-duplex aumenta a eficiência da largura de banda, permitindo
+    que a comunicação seja simultânea. Isso também é conhecido como comunicação
+    bidirecional e necessita de microsegmentação para ser feita.
+
+ -  Uma Lan microsegmentada é criada quando a porta de um switch tem apenas um
+    dispositivo conectado e está operando no modo full-duplex.
+
+ -  Não domínio de colisão associado a uma porta de switch operando em modo
+    full-duplex
+
+ -  A comunicação half-duplex é a comunicação unidirecional, os dados só fluem em
+    uma direção por vez, o que pode acarretar problemas de desempenho e colisões.
+
+ -  O modo full-duplex oference 100% de eficiência em ambas as direções. Isso
+    duplica o potencial da largura de banda.
+
+1.2.2 - Configurar as portas de um switch na camada física
+
+ -
