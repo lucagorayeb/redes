@@ -53,3 +53,29 @@ Redes de computadores CCNA - 2
    - Comando: show controllers ethernet-controller -> Mostra o status do mdix
 
 1.2.4 - Comandos de verificação do switch
+
+# Comando de verificação de Switch
+
+-- show interfaces [interface-id]  -> Exibir o status e a configuração da interface.
+
+-- show startup-config -> Exibir a configuração atual de inicialização.
+
+-- show running-config -> Exibir a configuração atual em execução.
+
+-- show flash -> Exibir informações sobreo sistema de arquivos de momória flash.
+
+-- show version -> Exibir o status de hardware e software di sistema.
+
+-- show histary -> Exibe o histórico do comando digitado.
+
+-- show ip interface [interface-id] ou show ipv6 interface [interface-id] -> Exive indormações de IP sobre uma interface.
+
+-- show mac-address-table ou show mac address-table -> Exibir a tabela de endereços MAC.
+
+1.2.5 - Verifique a configuração da porta do switch
+
+1.2.6 - Problemas da camada de acesso à rede
+
+   - Se a interface estiver ativa, mas o protocolo de linha não estiver ativo é um problema.
+     Pode ser problema de encapsulamento, a interface pode estar com defeito ou pode ser um
+     problema de hardware.
