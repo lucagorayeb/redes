@@ -22,4 +22,34 @@ Redes de computadores CCNA - 2
 
 1.2.2 - Configurar as portas de um switch na camada física
 
- -
+ - As portas do switch podem ser configuradas quanto ao modo duplex e a velocidade
+
+ - Comando: duplex interface confuguration mode -> Para especificar o modo duplex da porta.
+
+ - Comando: speed interface confuguration mode -> Para especificar manualmente a velocidade.
+
+ Exemplo de configuração de switch:
+
+      # configure terminal
+      # interface FastEthernet 0/1
+      # duplex full
+      # speed 100
+      # end
+      # copy running-config startup-config
+
+1.2.3 MDIX Automático
+
+   - Identifica a o tipo de conexão e o cabo usado (direto ou cruzado) e configura
+     de forma adequada.
+
+   - Quando são conectados switches sem o MDIX está ativado o cabos straight-through devem
+     ser usados apenas para conexão em servidores, estações de trabalho ou roteadores.
+     Os cabos do tipo phillips devem ser usados para conectar outros dispositivos.
+
+   - Qunado o MDIX está ativado, qualquer cabo consegue se conectar a interface.
+
+   - Comando: mdix auto -> Para ativar o reconhecedor de conexões por cabo
+
+   - Comando: show controllers ethernet-controller -> Mostra o status do mdix
+
+1.2.4 - Comandos de verificação do switch
