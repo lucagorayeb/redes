@@ -1,0 +1,191 @@
+PROBLEMAS
+
+1. Você estabelece um canal de comunicação entre dois castelos medievais, permitindo que um
+corvo treinado carregue repetidamente um pergaminho do castelo que o enviou ao castelo que o
+recebe, a 160 km de distância. O corvo voa a uma velocidade média de 40 km/h e carrega um
+pergaminho de cada vez. Cada pergaminho contém 1,8 terabytes de dados. Calcule a taxa de dados
+deste canal ao enviar:
+
+(i) 1,8 terabytes de dados;
+
+(ii) 3,6 terabytes de dados;
+
+(iii) um fluxo infinito de dados.
+
+2. Como parte da Internet das Coisas, os dispositivos do dia a dia estão cada vez mais
+conectados a redes de computado-res. A loT facilita às pessoas, entre outras coisas, monitorar
+seus pertences e o uso dos aparelhos. Mas qualquer tecnologia pode ser usada tanto para o bem
+quanto para o mal.
+
+Discuta algumas desvantagens dessa tecnologia.
+
+3. As redes sem fio ultrapassaram as redes com fio em popu-laridade, embora normalmente
+forneçam menos largura de banda. Indique duas razões pelas quais isso aconteceu.
+
+4. Em vez de comprar seu próprio hardware, pequenas empresas costumam hospedar suas aplicações
+em centros de dados. Discuta as vantagens e desvantagens dessa técnica, tanto do ponto de
+vista da empresa quanto de seus usuários.
+
+5. Uma alternativa para uma LAN é simplesmente instalar um grande sistema de tempo
+compartilhado (timesharing) com terminais para todos os usuários. Apresente duas vantagens de
+um sistema cliente-servidor que utilize uma LAN.
+
+6. O desempenho de um sistema cliente-servidor é influenciado por dois fatores de rede: a
+largura de banda da rede (quantos bits/s ela pode transportar) e a latência (quantos segundos
+o primeiro bit leva para ir do cliente até o servi-dor). Dê um exemplo de uma rede que exibe
+alta largura de banda e alta latência. Depois, dê um exemplo de rede com baixa largura de
+banda e baixa latência.
+
+7. Um fator que influencia no atraso de um sistema de comutação de pacotes store-and-forward é
+qual o tempo necessário para armazenar e encaminhar um pacote por um switch. Se o tempo de
+comutação é 20 us, é provável que esse seja um fator importante na resposta de um sistema
+cliente-servidor quando o cliente está em Nova orque e o servidor está na Califórnia?
+
+Suponha que a velocidade de propagação em cobre e fibra seja igual a 2/3 da velocidade da luz
+no vácuo.
+
+8. Um servidor envia pacotes a um cliente via satélite. Os pacotes devem atravessar um ou
+vários satélites antes de chegarem ao seu destino. Os satélites usam comutação de pacotes
+store-and-forward, com um tempo de comutação de 100 useg. Se os pacotes percorrerem uma
+distância total de 29.700 km, por quantos satélites os pacotes terão que passar se 1% do
+atraso for causado pela comutação de pacotes?
+
+9. Um sistema cliente-servidor usa uma rede de satélite, com o satélite a uma altura de 40.000
+km. Qual é o maior atraso em resposta a uma solicitação?
+
+10. Um sinal viaja a 2/3 da velocidade da luz e leva 100 milissegundos para chegar ao seu
+destino. Que distância o sinal percorreu?
+
+11. Agora que quase todo mundo tem um computador doméstico ou dispositivo móvel conectado a
+uma rede de compu-tadores, será possível realizar referendos públicos instantâneos sobre
+legislações importantes pendentes. Em última análise, as legislaturas existentes poderiam ser
+eliminadas, para permitir que a vontade do povo fosse expressa direta-mente. Os aspectos
+positivos de tal democracia direta são bastante óbvios. Discuta alguns dos aspectos negativos.
+
+12. Um conjunto de cinco roteadores deve ser conectado a uma sub-rede ponto a ponto. Entre
+cada par de roteadores, os projetistas podem colocar uma linha de alta velocidade, uma linha
+de média velocidade, uma linha de baixa velocidade ou nenhuma linha. Se forem necessários 50
+ms do tempo do computador para gerar e inspecionar cada topo-logia, quanto tempo será
+necessário para inspecionar todas elas?
+
+13. Um grupo de 2^N - 1 roteadores está interconectado em uma árvore binária centralizada, com
+um roteador em cada nó da árvore. O roteador i se comunica com o roteador j enviando uma
+mensagem para a raiz da árvore. A raiz, então, envia a mensagem de volta para j. Derive uma
+expressão aproxima-da para o número médio de saltos por mensagem para um número n grande,
+supondo que todos os pares de roteadores são igualmente prováveis.
+
+14. Uma desvantagem de uma sub-rede de broadcast é a capacidade desperdiçada quando há vários
+hosts tentando acessar o canal ao mesmo tempo. Como um exemplo simples, suponha que o tempo
+esteja dividido em slots discretos, com cada um dos n hosts tentando usar o canal com
+probabilidade p durante cada slot. Que fração dos slots é desperdiçada em consequência das
+colisões?
+
+15. Em redes de computadores e outros sistemas complexos, o grande número de interações entre
+seus componentes muitas vezes torna impossível prever com muita confiança se e quando coisas
+ruins acontecerão. Como os objetivos de projeto das redes de computadores levam Isso em
+consideração?
+
+16. Explique por que a camada de enlace, a camada de rede e a camada de transporte precisam
+adicionar informações de ongem e destino à carga útil (payload).
+
+
+17. Combine as camadas - enlace, rede e transporte - com as garantias que cada uma pode
+fornecer ds camadas superiores.
+
+Camada
+Garantia
+- Rede
+Entrega pelo melhor esforço -
+_ Transporte
+Entrega confiável -
+Transporte
+Entrega em ordem
+Transporte
+Abstração de fluxo de bytes
+Abstração de enlace ponto a ponto Enlace de dados
+
+18. Cada camada de rede interage com a camada abaixo dela usando sua interface. Para cada uma
+das funções a seguir, indique a qual interface ela pertence.
+
+Funçao
+enviar_bits_por_enlace(bits)
+FiSICA
+Interface
+enviar.byles, para processodest, orig, bytes APLiCAÇAO enviar. bytes por enlacedest, orig,
+bytes) ENLAce de (A38.
+enviar_ bytes_ para_máquina(dest, orig, bytes) red e
+
+19. Suponha que dois terminais de rede tenham um tempo de ida e volta de 100 milissegundos e
+que o remetente transmita cinco pacotes a cada viagem de ida e volta. Qual será a taxa de
+transmissão do remetente para este tempo de ida e volta, assumindo pacotes de 1500 bytes? Dê
+sua resposta em bps.
+
+20. O presidente da Specialty Paint Corp. resolve trabalhar com uma cervejaria local com a
+finalidade de produzir uma lata de cerveja invisível (como uma medida para evitar acúmulo de
+lixo). Ele pede que o departamento jurídico analise a questão e este, por sua vez, entra em
+contato com a empresa de engenharia. Como resultado, o engenheiro-chefe entra em contato com o
+funcionário de cargo equivalente nà cervejaria para discutir os aspectos técnicos do projeto.
+Em seguida, os engenheiros enviam um relatório a seus respectivos departamentos jurídicos, que
+então discutem por telefone os aspectos legais. Por fim, os presidentes das duas empresas
+discutem as questões financeiras do negócio. Que princípio de um protocolo multicamadas (com
+base no modelo OSI) esse mecanismo de comunicação infringe?
+
+21. Duas redes podem oferecer um serviço orientado a conexões bastante confiável. Uma delas
+oferece um fluxo de bytes confiável e a outra, um fluxo de mensagens confiável.
+Elas são idênticas? Se forem, por que se faz essa distinção? Se não, dê um exemplo de como
+elas diferem.
+
+22. O que significa "negociação" em uma discussão sobre protocolos de rede? Dê um exemplo.
+
+23. Na Figura 1.31, é mostrado um serviço. Há outros serviços implícitos nessa figura? Em caso
+afirmativo, onde? Caso contrário, por que não?
+
+24. Em algumas redes, a camada de enlace de dados trata erros de transmissão solicitando a
+retransmissão de quadros danificados. Se a probabilidade de um quadro estar da rado é p. qual
+é o número médio de transmissões nes rias para enviar um quadro? Suponha que as confirm
+nunca sejam perdidas.
+
+25. Quais das camadas OSI e TCP/IP tratam de cada um das seguintes:
+
+(a) Dividir o fluxo de bits transmitido em quadros.
+(b) Determinar qual rota deve ser usada atraves, da sub-rede?
+
+26. Se a unidade trocada no nível do enlace de dados mada de quadro e a unidade trocada no
+nivel da rede chamada de pacote, os quadros encapsulam os pacotes a os pacotes encapsulam os
+quadros? Explique sua resposta.
+
+27. Considere uma hierarquia de protocolos de seis camad em que a camada 1 é a mais baixa e a
+camada 6 é am alta. Uma aplicação envia uma mensagem M, passando,
+-a para a camada 6. Todas as camadas pares anexam e término à carga útil (payload) e todas as
+camadas ímpares anexam um cabeçalho à carga util. Desenhe os cabeçalho términos e a mensagem
+original M na ordem em que são enviados pela rede.
+
+28. Um sistema tem uma hierarquia de protocolos com N camadas. As aplicações geram mensagens
+com M bytes de comprimento. Em cada uma das camadas é acrescentas um cabeçalho com h bytes.
+Que fração da largura de band da rede é preenchida pelos cabeçalhos?
+
+29. Dê cinco exemplos de um dispositivo conectado a duas redes ao mesmo tempo e explique por
+que isso é útil.
+
+30. A sub-rede da Figura 1.12(b) foi projetada para resistir i uma guerra nuclear. Quantas
+bombas seriam necessáris para particionar os nós em dois conjuntos desconectados
+Suponha que qualquer bomba destrua um nó e todos os links conectados a ele.
+
+31. A cada 18 meses, a Internet praticamente dobra de tamanho
+Embora ninguém possa dizer com certeza, estima-se que havia 1 bilhão de hosts em 2018. Utilize esses dados pan calcular o número previsto de hosts da Internet em 2021.
+Você acredita nisso? Explique por que sim ou por que não.
+
+32. Quando um arquivo é transferido entre dois computadores, duas estratégias de confirmação
+são possíveis. Na primetra o arquivo é dividido em pacotes, os quais são confirmados
+individualmente pelo receptor, mas a transferência do arquivo como um todo não é confirmada.
+Na segunda, os pacotes não são confirmados individualmente, mas, ao chega a seu destino, o
+arquivo inteiro é confirmado. Analise essas
+
+33. As operadoras da rede de telefonia móvel precisam saber onde estão localizados os
+smartphones de seus assinantes (logo, seus usuários). Explique por que isso é ruim para os
+usuários. Agora, dê motivos pelos quais isso é bom para
+
+34. Qual era o comprimento de um bit, em metros, no padio
+802.3 original? Utilize uma velocidade de transmissão de
+10 Mbps e suponha que a velocidade de propagação no cabo coaxial seja igual a 2/3 da
+velocidade da luz no vácuo.
