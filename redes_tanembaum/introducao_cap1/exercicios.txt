@@ -8,9 +8,30 @@ deste canal ao enviar:
 
 (i) 1,8 terabytes de dados;
 
+R: t = d/v -> t = 160Km / 40Km/h -> t = 4 horas
+
 (ii) 3,6 terabytes de dados;
 
+R: Como foi calculado no exercício anterior, o passáro gasta 4 horas para levar 
+   um pergaminho. Como um pergaminho tem no máximo 1,8Tb, o passáro deve fazer 
+   duas viagens. O passáro deve ir, voltar e ir novamente. Totalizando 12 horas 
+   de viagem.
+
+   t = d/v -> t = 160Km / 40Km/h -> t = 4 horas * 3 -> t = 12 horas
+
 (iii) um fluxo infinito de dados.
+
+R: Diferente das anteriores, temos um valor que não foi especifícado. Assim 
+   o calculo será feito baseando-se na média para transportar um único perga-
+   minho. Como já especifícado no problema, o passáro não necessita de descanso.
+   
+   Portanto: 
+
+   t do percurso -> d percurso / v do passáro -> tp = 160Km / 40Km/h -> t = 4 horas * 2
+   -> tp = 8 horas
+
+   Assim temos que o tempo para um fluxo infinito é de um transporte de 1,8Tb a cada 
+   8 horas.
 
 2. Como parte da Internet das Coisas, os dispositivos do dia a dia estão cada vez mais
 conectados a redes de computado-res. A loT facilita às pessoas, entre outras coisas, monitorar
@@ -19,16 +40,43 @@ quanto para o mal.
 
 Discuta algumas desvantagens dessa tecnologia.
 
+R: A IoT, internet of things ou, em português, internet das coisas, sem dúvidas facilitou 
+   a vida humana em diversos aspectos. O controle de electrodomésticos como ar condicionado, 
+   lampâda e outros. A IoT também pode proporcionar muitos maleficíos, como falhas de segurança
+   e ou acesso indesejado de outras pessoas. Essas falhas podem colocar em risco a saúde da 
+   pessoa assim como seus pertences ou seus entes queridos. O principal motivo da dificuldade 
+   de atualizações e também depende de quem os fabricou e quais processos e peças foram usadas
+   na construção do aparelho.
+
 3. As redes sem fio ultrapassaram as redes com fio em popu-laridade, embora normalmente
 forneçam menos largura de banda. Indique duas razões pelas quais isso aconteceu.
+
+R: Os motivos das redes sem fio serem mais populares que as redes cabeadas é devido ao custo 
+   de implementação , é mais barato que rede cabeada e pela mobilidade que o usuário tem com 
+   a mesma.
 
 4. Em vez de comprar seu próprio hardware, pequenas empresas costumam hospedar suas aplicações
 em centros de dados. Discuta as vantagens e desvantagens dessa técnica, tanto do ponto de
 vista da empresa quanto de seus usuários.
 
+R: As desvantagens de uma empresa de menor porte hospedar seus serviços ou dados em um servidor
+   de terceiro é quase nenhuma. Se a empresa terceirizar o serviço para um empresa não confiável, 
+   a empresa que terceirizou o serviço pode sofrer com instabilidade.
+
+   As vantagens são muitas, a empresa que terceirizou e serviço não precisa lidar com:
+   
+   - Manutenção de hardware      |  - Possui alta taxa de transfêrencia 
+   - Energia elétrica            |  - RAM disponível 
+   - Throughput                  |  - Paga pelo que vai usar
+   - Segurança (parte dela)      |
+
 5. Uma alternativa para uma LAN é simplesmente instalar um grande sistema de tempo
 compartilhado (timesharing) com terminais para todos os usuários. Apresente duas vantagens de
 um sistema cliente-servidor que utilize uma LAN.
+
+R: As vantagens de uma LAN para um sistema cliente servidor são não vai haver tempo disperdiçado 
+   por uma máquina que não vai fazer nenhuma solicitação. E uma máquina que precisa fazer mais 
+   requisições terá mais tempo para faze-las.
 
 6. O desempenho de um sistema cliente-servidor é influenciado por dois fatores de rede: a
 largura de banda da rede (quantos bits/s ela pode transportar) e a latência (quantos segundos
@@ -154,26 +202,65 @@ nunca sejam perdidas.
 nivel da rede chamada de pacote, os quadros encapsulam os pacotes a os pacotes encapsulam os
 quadros? Explique sua resposta.
 
-27. Considere uma hierarquia de protocolos de seis camad em que a camada 1 é a mais baixa e a
-camada 6 é am alta. Uma aplicação envia uma mensagem M, passando,
--a para a camada 6. Todas as camadas pares anexam e término à carga útil (payload) e todas as
+27. Considere uma hierarquia de protocolos de seis camadas em que a camada 1 é a mais baixa e a
+camada 6 é am alta. Uma aplicação envia uma mensagem M, passando,a para a camada 6. Todas as camadas pares anexam e término à carga útil (payload) e todas as
 camadas ímpares anexam um cabeçalho à carga util. Desenhe os cabeçalho términos e a mensagem
 original M na ordem em que são enviados pela rede.
+
+R:  ENVIA                       RECEBE
+    CAMADA 6                    CAMADA 6
+       h1-M                        h1-M
+
+    CAMADA 5                    CAMADA 5
+    h1-M-t1                     h1-M-t1
+
+    CAMADA 4                    CAMADA 4
+    h2-h1-M-t1                  h2-h1-M-t1
+
+    CAMADA 3                    CAMADA 3
+    h2-h1-M-t1-t2               h2-h1-M-t1-t2
+
+    CAMADA 2                    CAMADA 2
+    h3-h2-h1-M-t1-t2            h3-h2-h1-M-t1-t2
+
+    CAMADA 1                    CAMADA 1
+    h3-h2-h1-M-t1-t2-t3         h3-h2-h1-M-t1-t2-t3
+            |                         ^
+            |                         |
+            |_________________________|
 
 28. Um sistema tem uma hierarquia de protocolos com N camadas. As aplicações geram mensagens
 com M bytes de comprimento. Em cada uma das camadas é acrescentas um cabeçalho com h bytes.
 Que fração da largura de band da rede é preenchida pelos cabeçalhos?
 
+R:
+    - São N camadas
+    - Mensagem de tamanho M bytes
+    - Cabeçalho de tamanho h bytes
+
+    Supondo que por cada camada que a mensagem passar vai ser adicionado um cabeçalho.
+    Temos que a quantidade de cabeçalhos é N*h ou N, pois h vale 1.
+
+    A largura de banda representa 100%.
+
+    Lb = M + N*h -> N*h = Lb - M -> h = (Lb - M) / N
+
 29. Dê cinco exemplos de um dispositivo conectado a duas redes ao mesmo tempo e explique por
 que isso é útil.
+
+R: Celular, Servidor TCP, Switch, Roteador, Antena de celular.
+   Isso se faz útil para garantir que o dispositivo não fique sem conexão.
+   E em caso de servidores serve como redundância para garantir a segurança.
 
 30. A sub-rede da Figura 1.12(b) foi projetada para resistir i uma guerra nuclear. Quantas
 bombas seriam necessáris para particionar os nós em dois conjuntos desconectados
 Suponha que qualquer bomba destrua um nó e todos os links conectados a ele.
 
-31. A cada 18 meses, a Internet praticamente dobra de tamanho
-Embora ninguém possa dizer com certeza, estima-se que havia 1 bilhão de hosts em 2018. Utilize esses dados pan calcular o número previsto de hosts da Internet em 2021.
-Você acredita nisso? Explique por que sim ou por que não.
+31. A cada 18 meses, a Internet praticamente dobra de tamanho.Embora ninguém possa dizer com certeza,
+estima-se que havia 1 bilhão de hosts em 2018. Utilize esses dados pan calcular o número previsto de
+hosts da Internet em 2021. Você acredita nisso? Explique por que sim ou por que não.
+
+R: 2018 - 1B | 2019 - 2B | 2020 - 4B | 2021 - 8B
 
 32. Quando um arquivo é transferido entre dois computadores, duas estratégias de confirmação
 são possíveis. Na primetra o arquivo é dividido em pacotes, os quais são confirmados
