@@ -1,4 +1,6 @@
-PROBLEMAS
+PROBLEMAS DO CAPÍTULO 1 - Introdução 
+
+EXERCICIO 1-5 {{{
 
 1. Você estabelece um canal de comunicação entre dois castelos medievais, permitindo que um
 corvo treinado carregue repetidamente um pergaminho do castelo que o enviou ao castelo que o
@@ -78,6 +80,10 @@ R: As vantagens de uma LAN para um sistema cliente servidor são não vai haver 
    por uma máquina que não vai fazer nenhuma solicitação. E uma máquina que precisa fazer mais 
    requisições terá mais tempo para faze-las.
 
+}}}
+
+EXERCICIO 6-10 {{{
+
 6. O desempenho de um sistema cliente-servidor é influenciado por dois fatores de rede: a
 largura de banda da rede (quantos bits/s ela pode transportar) e a latência (quantos segundos
 o primeiro bit leva para ir do cliente até o servidor). Dê um exemplo de uma rede que exibe
@@ -130,8 +136,32 @@ R: Distância percorrida pelos pacotes = 2,97 . 10⁻⁷ m
 9. Um sistema cliente-servidor usa uma rede de satélite, com o satélite a uma altura de 40.000
 km. Qual é o maior atraso em resposta a uma solicitação?
 
+R: A velocidade de propagação é 2/3 da velocidade da luz.
+   Velocidade = 2 . 10⁸ m/s
+   Distância do satélite até a terra = 40.000 Km ou 4 . 10⁷ m
+   Tempo = Distância / Velocidade
+   Tempo = 4 . 10⁷ m / 2 . 10⁸ m/s
+   Tempo = 2 . 10⁻¹ s
+
+   O tempo para a solicitação chegar ao satelite é de 2 . 10⁻¹ segundos, mas como a questão 
+   pede o tempo de atraso máximo da resposta de um solicitação. Basta multiplicar o tempo 
+   por dois.
+
+   Tempo final = 2 . 2 . 10⁻¹ s
+   Tempo final = 4 . 10⁻¹ s
+
 10. Um sinal viaja a 2/3 da velocidade da luz e leva 100 milissegundos para chegar ao seu
 destino. Que distância o sinal percorreu?
+
+R: Velocidade do sinal = 2 . 10⁸ m/s
+   Tempo para o sinal chegar ao destino = 100 . 10⁻³ s 
+   Distância = Velocidade do sinal . Tempo até o destino 
+   Distância = 2 . 10⁸ m/s . 100 . 10⁻³ s
+   Distância = 200 . 10⁵ m ou 2 . 10⁷ m
+
+}}}
+
+EXERCICIO 11-15 {{{
 
 11. Agora que quase todo mundo tem um computador doméstico ou dispositivo móvel conectado a
 uma rede de compu-tadores, será possível realizar referendos públicos instantâneos sobre
@@ -139,17 +169,34 @@ legislações importantes pendentes. Em última análise, as legislaturas existe
 eliminadas, para permitir que a vontade do povo fosse expressa direta-mente. Os aspectos
 positivos de tal democracia direta são bastante óbvios. Discuta alguns dos aspectos negativos.
 
+R: A população em geral não é apta tomar um decisão que projete e garante a prosperidade da
+   nação. Como as pautas seriam sugeridas? Quem faria essa sugestão? Como as implementações 
+   seriam executadas? Parte da população não tem instrução para lidar com esse tipo de 
+   problema. Campanhas excessivas de votos populares torna se cansativo, demorado e obsoleto.
+   Os representantes populares são importantes em um cenário político, econômico e social de 
+   um governo. Aquele representante eleito que não agradar durante a sua posse será retirado.
+ 
 12. Um conjunto de cinco roteadores deve ser conectado a uma sub-rede ponto a ponto. Entre
 cada par de roteadores, os projetistas podem colocar uma linha de alta velocidade, uma linha
 de média velocidade, uma linha de baixa velocidade ou nenhuma linha. Se forem necessários 50
 ms do tempo do computador para gerar e inspecionar cada topo-logia, quanto tempo será
-necessário para inspecionar todas elas?
+necessário para inspecionar todas elas? 
 
-13. Um grupo de 2^N - 1 roteadores está interconectado em uma árvore binária centralizada, com
+R: Como são 5 roteadores adicionados a topologia. O computador deve mandar um requisição de
+   inspeção para cada. O tempo total é de 250 ms. 
+
+13. Um grupo de 2^n - 1 roteadores está interconectado em uma árvore binária centralizada, com
 um roteador em cada nó da árvore. O roteador i se comunica com o roteador j enviando uma
 mensagem para a raiz da árvore. A raiz, então, envia a mensagem de volta para j. Derive uma
 expressão aproxima-da para o número médio de saltos por mensagem para um número n grande,
 supondo que todos os pares de roteadores são igualmente prováveis.
+
+R: - Um grupo de 2^n - 1 roteadores.
+   - Está interconectado com uma árvore binária, O(log(n)).
+   - I se comunica com J enviando uma mensagem de volta 
+     para a raiz da árvore. A raiz envia a mensagem para J.
+
+   A equação que descreve o número de saltos é log(2^n - 1). 
 
 14. Uma desvantagem de uma sub-rede de broadcast é a capacidade desperdiçada quando há vários
 hosts tentando acessar o canal ao mesmo tempo. Como um exemplo simples, suponha que o tempo
@@ -157,10 +204,17 @@ esteja dividido em slots discretos, com cada um dos n hosts tentando usar o cana
 probabilidade p durante cada slot. Que fração dos slots é desperdiçada em consequência das
 colisões?
 
+R: Como todos os hosts estão tentando acessar o mesmo canal a cada slot a fração disperdiçada é
+   1/1. Todos vão sofrer colisões.
+ 
 15. Em redes de computadores e outros sistemas complexos, o grande número de interações entre
 seus componentes muitas vezes torna impossível prever com muita confiança se e quando coisas
 ruins acontecerão. Como os objetivos de projeto das redes de computadores levam Isso em
 consideração?
+
+}}}
+
+ EXERCICIO 16-20 {{{
 
 16. Explique por que a camada de enlace, a camada de rede e a camada de transporte precisam
 adicionar informações de ongem e destino à carga útil (payload).
@@ -207,12 +261,16 @@ então discutem por telefone os aspectos legais. Por fim, os presidentes das dua
 discutem as questões financeiras do negócio. Que princípio de um protocolo multicamadas (com
 base no modelo OSI) esse mecanismo de comunicação infringe?
 
+ }}}
+
+ EXERCICIO 21-25 {{{
+
 21. Duas redes podem oferecer um serviço orientado a conexões bastante confiável. Uma delas
 oferece um fluxo de bytes confiável e a outra, um fluxo de mensagens confiável.
 Elas são idênticas? Se forem, por que se faz essa distinção? Se não, dê um exemplo de como
 elas diferem.
 
-22. O que significa "negociação" em uma discussão sobre protocolos de rede? Dê um exemplo.
+22. O que significa negociação em uma discussão sobre protocolos de rede? Dê um exemplo.
 
 23. Na Figura 1.31, é mostrado um serviço. Há outros serviços implícitos nessa figura? Em caso
 afirmativo, onde? Caso contrário, por que não?
@@ -226,6 +284,10 @@ nunca sejam perdidas.
 
 (a) Dividir o fluxo de bits transmitido em quadros.
 (b) Determinar qual rota deve ser usada atraves, da sub-rede?
+
+ }}}
+
+ EXERCICIO 26-30 {{{
 
 26. Se a unidade trocada no nível do enlace de dados mada de quadro e a unidade trocada no
 nivel da rede chamada de pacote, os quadros encapsulam os pacotes a os pacotes encapsulam os
@@ -285,6 +347,10 @@ R: Celular, Servidor TCP, Switch, Roteador, Antena de celular.
 bombas seriam necessáris para particionar os nós em dois conjuntos desconectados
 Suponha que qualquer bomba destrua um nó e todos os links conectados a ele.
 
+ }}}
+
+EXERCICIO 31-35 {{{
+
 31. A cada 18 meses, a Internet praticamente dobra de tamanho.Embora ninguém possa dizer com certeza,
 estima-se que havia 1 bilhão de hosts em 2018. Utilize esses dados pan calcular o número previsto de
 hosts da Internet em 2021. Você acredita nisso? Explique por que sim ou por que não.
@@ -305,3 +371,5 @@ usuários. Agora, dê motivos pelos quais isso é bom para
 802.3 original? Utilize uma velocidade de transmissão de
 10 Mbps e suponha que a velocidade de propagação no cabo coaxial seja igual a 2/3 da
 velocidade da luz no vácuo.
+
+}}}
