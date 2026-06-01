@@ -80,9 +80,12 @@ R: As vantagens de uma LAN para um sistema cliente servidor são não vai haver 
 
 6. O desempenho de um sistema cliente-servidor é influenciado por dois fatores de rede: a
 largura de banda da rede (quantos bits/s ela pode transportar) e a latência (quantos segundos
-o primeiro bit leva para ir do cliente até o servi-dor). Dê um exemplo de uma rede que exibe
+o primeiro bit leva para ir do cliente até o servidor). Dê um exemplo de uma rede que exibe
 alta largura de banda e alta latência. Depois, dê um exemplo de rede com baixa largura de
 banda e baixa latência.
+
+R: Rede com alta largura de banda e alta latência são as redes via satélite.
+   Rede com baixa largura de banda e baixa latência é a rede bluetooth.
 
 7. Um fator que influencia no atraso de um sistema de comutação de pacotes store-and-forward é
 qual o tempo necessário para armazenar e encaminhar um pacote por um switch. Se o tempo de
@@ -92,12 +95,38 @@ cliente-servidor quando o cliente está em Nova orque e o servidor está na Cali
 Suponha que a velocidade de propagação em cobre e fibra seja igual a 2/3 da velocidade da luz
 no vácuo.
 
+R: Velocidade de transmissão = 2 . 10⁸ m/s
+   Tempo de atraso = 20 . 10⁻⁶ s
+   Distância de Nova York para California = 4000 km ou 4 . 10⁶ m
+   Tempo de propagação = 4 . 10⁶ m / 2 . 10⁸ m/s
+   Tp = 2 . 10⁻² s
+
+   A comparação entre os dois tempos nos mostra que o tempo de propagação é 100 . 10⁻³ vezes 
+   maior. Então o tempo de comutação se torna irrelevante para a comunicação entre o cliente
+   e o servidor entre Nova York e a California.
+
+
 8. Um servidor envia pacotes a um cliente via satélite. Os pacotes devem atravessar um ou
 vários satélites antes de chegarem ao seu destino. Os satélites usam comutação de pacotes
 store-and-forward, com um tempo de comutação de 100 useg. Se os pacotes percorrerem uma
 distância total de 29.700 km, por quantos satélites os pacotes terão que passar se 1% do
 atraso for causado pela comutação de pacotes?
 
+R: Distância percorrida pelos pacotes = 2,97 . 10⁻⁷ m
+   Tempo de comutação por satélite = 100 . 10 ⁻⁶ s
+   Velocidade dos pacotes = 2 . 10⁸ m/s
+   Tempo de propagação = 2,97 . 10⁻⁷ / 2 . 10⁸ m/s
+   Tp = 0,1485 s
+   
+   [Duas formas de calcular o tempo de comutação]
+   Tempo de comutação = Número de satélites . 100 . 10⁻⁶ s
+   Tempo de comutação = 0,01 . tp
+
+   [Número de satélites]
+   N = 10⁻² . 14,85 . 10⁻² / 10² . 10⁻⁶
+   N = 14,85 
+   N(Arredondade) = 15 satélites 	
+   
 9. Um sistema cliente-servidor usa uma rede de satélite, com o satélite a uma altura de 40.000
 km. Qual é o maior atraso em resposta a uma solicitação?
 
